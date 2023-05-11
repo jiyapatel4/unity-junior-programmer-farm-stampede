@@ -10,6 +10,9 @@ public class PlayerController : MonoBehaviour
     // userinput
     public float horizontalInput;
 
+    // player x-value range
+    private float xRange = 10.0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -28,14 +31,14 @@ public class PlayerController : MonoBehaviour
         // ensure player stays within the specified bounds and spawn player to the edge if they attempt to go past the restrictions
 
         // left bound
-        if (transform.position.x < -10)
+        if (transform.position.x < -xRange)
         {
-            transform.position = new Vector3(-10, transform.position.y, transform.position.z);
+            transform.position = new Vector3(-xRange, transform.position.y, transform.position.z);
         }
         // right bound
-        else if (transform.position.x > 10)
+        else if (transform.position.x > xRange)
         {
-            transform.position = new Vector3(10, transform.position.y, transform.position.z);
+            transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
         
     }
