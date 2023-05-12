@@ -44,6 +44,8 @@ public class PlayerController : MonoBehaviour
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
         }
 
+
+        // when space key is pressed
         if (Input.GetKeyDown(KeyCode.Space))
         {
             // Launch pizza projectile
