@@ -24,6 +24,9 @@ public class DestroyOutOfBounds : MonoBehaviour
         }
         else if (transform.position.z < bottomBound)
         {
+            // display message in console when an animal passes the player
+            Debug.Log("Game Over!");
+
             Destroy(gameObject);
         }
 
