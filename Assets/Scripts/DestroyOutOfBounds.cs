@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class DestroyOutOfBounds : MonoBehaviour
 {
-    // top boundary
-    private float topBound = 30.0f;
+    // boundaries
     private float bottomBound = -10.0f;
+    private float horizontalBound = 15.0f;
 
     // Start is called before the first frame update
     void Start()
@@ -17,17 +17,21 @@ public class DestroyOutOfBounds : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (transform.position.z > topBound)
+        // destroy animals that reach the bottom bound
+        if (transform.position.z < bottomBound)
         {
             Destroy(gameObject);
+            // indicate the game is over in the console
+            Debug.Log("Game Over!");
 
         }
-        else if (transform.position.z < bottomBound)
+        // destroy animals that reach the left or right horizontal bounds
+        if (transform.position.x > horizontalBound || transform.position.x < -horizontalBound)
         {
-            // display message in console when an animal passes the playerd
-            Debug.Log("Game Over!");
             Destroy(gameObject);
+            Debug.Log("Game Over!");
         }
+
 
         // NOTES:
         // Destroy() is a Unity method that removes a game object from the scene

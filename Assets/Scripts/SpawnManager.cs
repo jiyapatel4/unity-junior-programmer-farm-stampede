@@ -42,15 +42,18 @@ public class SpawnManager : MonoBehaviour
         // pick a random index value
         int animalIndex = Random.Range(0, animalPrefabs.Length);
 
+        // animals spawning ahead
         if (animalIndex == 0 || animalIndex == 1 || animalIndex == 2)
         {
             // create a new Vector3 object where the x value is generated randomly between a specific range
             spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
         }
+        // animals spawning from the right
         else if (animalIndex == 3 || animalIndex == 4 || animalIndex == 5)
         {
             spawnPosition = new Vector3(-horizontalSpawnRange, 0, Random.Range(spawnRangeZBottom, spawnRangeZTop));
         }
+        // animals spawning from the left
         else
         {
             spawnPosition = new Vector3(horizontalSpawnRange, 0, Random.Range(spawnRangeZBottom, spawnRangeZTop));
