@@ -8,10 +8,13 @@ public class PlayerController : MonoBehaviour
     public float speed = 10.0f;
 
     // userinput
-    public float horizontalInput;
+    private float horizontalInput;
+    private float verticalInput;
 
-    // player x-value range
+    // player boundary ranges
     private float xRange = 10.0f;
+    private float zRangeTop = 10.0f;
+    private float zRangeBottom = -1.0f;
 
     // references original pizza prefab
     public GameObject pizzaProjectile;
@@ -27,12 +30,14 @@ public class PlayerController : MonoBehaviour
     {
         // get userinput
         horizontalInput = Input.GetAxis("Horizontal");
+        verticalInput = Input.GetAxis("Vertical");
 
         // make player move left and right
         transform.Translate(Vector3.right * speed * Time.deltaTime * horizontalInput);
+        // make the player move forwards and backwards
+        transform.Translate(Vector3.forward * speed * Time.deltaTime * verticalInput);
 
         // ensure player stays within the specified bounds and spawn player to the edge if they attempt to go past the restrictions
-
         // left bound
         if (transform.position.x < -xRange)
         {
@@ -42,6 +47,17 @@ public class PlayerController : MonoBehaviour
         else if (transform.position.x > xRange)
         {
             transform.position = new Vector3(xRange, transform.position.y, transform.position.z);
+        }
+
+        // top bound
+        if (transform.position.z > zRangeTop)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRangeTop);
+        }
+        // bottom bound
+        else if (transform.position.z < zRangeBottom)
+        {
+            transform.position = new Vector3(transform.position.x, transform.position.y, zRangeBottom);
         }
 
 
