@@ -21,15 +21,12 @@ public class DestroyOutOfBounds : MonoBehaviour
         if (transform.position.z < bottomBound)
         {
             Destroy(gameObject);
-            // indicate the game is over in the console
-            Debug.Log("Game Over!");
 
         }
         // destroy animals that reach the left or right horizontal bounds
-        if (transform.position.x > horizontalBound || transform.position.x < -horizontalBound)
+        else if (transform.position.x > horizontalBound || transform.position.x < -horizontalBound)
         {
             Destroy(gameObject);
-            Debug.Log("Game Over!");
         }
 
 
