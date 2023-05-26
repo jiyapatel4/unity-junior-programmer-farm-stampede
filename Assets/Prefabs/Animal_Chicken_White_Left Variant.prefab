@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4678909490500751542, guid: 63829b44a5cef46d08a63cf180cf91aa, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.67
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 4678909490500751542, guid: 63829b44a5cef46d08a63cf180cf91aa, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4678909490501175008, guid: 63829b44a5cef46d08a63cf180cf91aa, type: 3}
       propertyPath: m_Name
-      value: Animal_Chicken_White_Left
+      value: Animal_Chicken_White_Left Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 63829b44a5cef46d08a63cf180cf91aa, type: 3}

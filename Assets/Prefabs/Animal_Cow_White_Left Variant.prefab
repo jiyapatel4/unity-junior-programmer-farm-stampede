@@ -13,7 +13,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4586500818800315518, guid: 2418fe43305db453da0f12e283a3711b, type: 3}
       propertyPath: m_LocalPosition.x
-      value: -15.311756
+      value: -21
       objectReference: {fileID: 0}
     - target: {fileID: 4586500818800315518, guid: 2418fe43305db453da0f12e283a3711b, type: 3}
       propertyPath: m_LocalPosition.y
@@ -53,7 +53,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 4586500818800638546, guid: 2418fe43305db453da0f12e283a3711b, type: 3}
       propertyPath: m_Name
-      value: Animal_Cow_White_Left
+      value: Animal_Cow_White_Left Variant
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 2418fe43305db453da0f12e283a3711b, type: 3}

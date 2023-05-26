@@ -13,7 +13,7 @@ public class SpawnManager : MonoBehaviour
     private int spawnRangeX = 10;
     private int spawnPosZ = 20;
 
-    private int horizontalSpawnRange = 15;
+    private int horizontalSpawnRange = 21;
     private int spawnRangeZTop = 13;
     private int spawnRangeZBottom = 2;
 
@@ -48,12 +48,12 @@ public class SpawnManager : MonoBehaviour
             // create a new Vector3 object where the x value is generated randomly between a specific range
             spawnPosition = new Vector3(Random.Range(-spawnRangeX, spawnRangeX), 0, spawnPosZ);
         }
-        // animals spawning from the right
+        // animals spawning from the left
         else if (animalIndex == 3 || animalIndex == 4 || animalIndex == 5)
         {
             spawnPosition = new Vector3(-horizontalSpawnRange, 0, Random.Range(spawnRangeZBottom, spawnRangeZTop));
         }
-        // animals spawning from the left
+        // animals spawning from the right
         else
         {
             spawnPosition = new Vector3(horizontalSpawnRange, 0, Random.Range(spawnRangeZBottom, spawnRangeZTop));
